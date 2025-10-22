@@ -1,5 +1,5 @@
 :root {
-    --laranja: #e2a704;
+    --laranja: #d97902;
     --cor-principal-rgb: 245 158 11;
     --branco: #fff;
     --fonte-corpo: 'Inter', Arial, sans-serif;
@@ -190,12 +190,10 @@ ul {
 }
 
 span {
-    color: #e2a704;
+    color: var(--laranja);
 }
 
-i {
-    color: #b3b9bb;
-}
+
 
 /* Estilos de classes */
 
@@ -228,14 +226,14 @@ i {
     }
 
     .banner_botao {
-        background-color: #e2a704;
+        background-color: var(--laranja);
         color: #000;
         text-align: center;
         height: 3rem;
     }
 
     .banner_botao2 {
-        border: 1px solid #e2a704;
+        border: 1px solid var(--laranja);
         border-radius:0.5rem;
         text-align: center;
         margin: 1.5rem 4rem 8rem;
@@ -245,21 +243,31 @@ i {
 
     .vantagens {
         background-color: #e2a70448;
-        border: 1px solid #e2a704d5;
+        border: 1px solid var(--laranja);
         color: var(--laranja);
         border-radius: 1rem;
-        height: 8rem;
-        margin: 2rem 0;
+        height: 13rem;
+        margin: 2rem 0; 
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .vantagens_icon {
+        font-size: 3rem;
     }
 
     .vantagens_texto {
-        margin: 1.5rem;
         text-align: center;
+        margin: 0.5rem;
+    }
+
+    #parceiros {
+        margin: 5rem 0;
     }
 
     .parceiros_titulo {
         text-align: center;
-        margin: 2rem 0;
+        margin: 3rem 0;
     }
 
     #parceiros {
@@ -273,13 +281,27 @@ i {
         background-color: #aaa9a621;
         border: 1px solid #aaa9a673;
         border-radius: 1rem;
-        height: 13rem;
+        height: 15rem;
         margin: 2rem 0;
+    }
+
+    .parceiros-icon {
+        background-color: #d97902;
+        height: 3.5rem;
+        padding: 0.7rem;
+        border-radius: 1rem;
+        width: 3.5rem;
+        color: var(--branco);
+        font-size: 2rem;
+        text-align: center;
+        margin: 1rem 0;
     }
 
     .parceiros_texto {
         margin: 1.5rem;
+        gap: 1rem;
     }
+
 
     .parceiros_rodape {
         margin: 2rem 0;
@@ -303,24 +325,29 @@ i {
     }
 
     .passos_numero {
-        color: #e2a704;
+        color: var(--laranja);
         flex-direction: left;
+    }
+
+    .passos-icon {
+        background-color: var(--laranja);
+        border-radius: 2rem;
+        font-size: 2rem;
+        color: var(--branco);
     }
 
     .passos_rodape {
         background-color: #e2a70448;
-        border: 1px solid #e2a704d5;
+        border: 1px solid var(--laranja);
         border-radius: 2rem;
         text-align: center;
         margin: 2rem;
     }
 
-    .recompensas_background {
-        background-color: #aaa9a621;
-    }
-
     .recompensas_titulo {
         text-align: center;
+        margin: 3rem 0;
+
     }
 
     .recompensas {
@@ -329,6 +356,10 @@ i {
         border-radius: 1rem;
         height: 13rem;
         margin: 2rem 0;
+    }
+
+    #recompensas {
+        background-color: #aaa9a621;
     }
 
     .recompensas_texto {
