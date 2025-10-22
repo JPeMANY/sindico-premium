@@ -1,5 +1,6 @@
 :root {
     --laranja: #e2a704;
+    --cor-principal-rgb: 245 158 11;
     --branco: #fff;
     --fonte-corpo: 'Inter', Arial, sans-serif;
 }
@@ -14,17 +15,21 @@
 body {
     background-color: #000;
     margin: 0;
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', sans-serif;
 }
 
 header {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: black;
+    background-color: hsl(0 0 0 / 0.5);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
     padding: 1rem;
     width: 100%;
     display: flex;
     flex-direction: column;
+    z-index: 10;
 }
 
     .menu {
@@ -51,9 +56,97 @@ header {
             margin-top: 1rem;
         }
 
+
+/* ------ Conteúdo ------ */
+    
 main {
     background-color: #070707;
-    margin-top: 81px;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    width: 100%;
+    padding: 4rem 1rem;
+}
+
+    section .conteudo {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #capa {
+        background-image: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
+    }
+
+        #capa::before, #capa::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            width: 18rem;
+            height: 18rem;
+            background-color: var(--laranja);
+            filter: blur(64px);
+            opacity: 0.05;
+        }
+
+        #capa::before {
+            top: 5rem;
+            left: 2.5rem;
+        }
+
+        #capa::after {
+            right: 2.5rem;
+            bottom: 5rem;
+        }
+
+        #capa .conteudo {
+            flex-direction: column;
+            align-items: center;
+        }
+
+            #capa .botoes {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+
+/* Classes gerais */
+
+.etiqueta {
+    background-color: rgb(var(--cor-principal-rgb) / 0.1);
+    border: 1px solid rgb(var(--cor-principal-rgb) / 0.3);;
+    color: var(--laranja);
+    border-radius: 2rem;
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.botao {
+    background-color: var(--laranja);
+    color: #000;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 1.5rem;
+    text-align: center;
+}
+
+.botao-fantasma {
+    background-color: transparent;
+    color: var(--laranja);
+    border-radius: 15px;
+    border: 1px solid var(--laranja);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 1.5rem;
+    text-align: center;
 }
 
 footer {
@@ -64,7 +157,6 @@ footer {
 
 /* Estilos de tags */
 h1 {
-    font-family:  roboto , sans-serif; 
     font-size: 3rem;
     color: #fff;
     line-height: 1.25em;
@@ -72,7 +164,6 @@ h1 {
 }
 
 h2 {
-    font-family: roboto , sans-serif;
     font-size: 2rem;
     color: #fff;
     line-height: 1.25em;
@@ -80,34 +171,26 @@ h2 {
 }
 
 h3 {
-    font-family: roboto , sans-serif;
     font-size: 1.3rem;
 }
 
 a {
     text-decoration: none;
-    font-family: var(--fonte-corpo);
 }
 
 p {
-    font-family: roboto, sans-serif;
     font-size: 1.25rem;
     line-height: 1.625;
     color: #b3b9bb;
 }
 
 ul {
-    font-family: roboto, sans-serif;
     font-size: 18px;
     color: #b3b9bb;
 }
 
 span {
     color: #e2a704;
-}
-
-strong {
-    font-family: roboto , sans-serif;
 }
 
 i {
@@ -123,14 +206,7 @@ i {
     color: var(--laranja);
 }
 
-.botao {
-    background-color: var(--laranja);
-    color: #000;
-    border-radius: 15px;
-    font-size: 0.9rem;
-    padding: 1rem;
-    text-align: center;
-}
+
 
 .container {
   width: 100%;
@@ -140,13 +216,7 @@ i {
   box-sizing: border-box;
 }
 
-    .etiqueta {
-        background-color: #e2a70448;
-        border: 1px solid #e2a704d5;
-        border-radius: 2rem;
-        text-align: center;
-        padding: 0.5rem;
-    }
+
 
     .banner_titulo {
         text-align: center;
