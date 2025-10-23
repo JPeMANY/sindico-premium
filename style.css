@@ -2,6 +2,8 @@
     --laranja: #d97902;
     --cor-principal-rgb: 245 158 11;
     --branco: #fff;
+    --preto: #000000;
+    --cinza: #b3b9bb;
     --fonte-corpo: 'Inter', Arial, sans-serif;
 }
 
@@ -193,10 +195,6 @@ ul {
     color: #b3b9bb;
 }
 
-span {
-    color: var(--laranja);
-}
-
 
 
 /* Estilos de classes */
@@ -251,7 +249,7 @@ span {
         color: var(--laranja);
         border-radius: 1rem;
         height: 13rem;
-        margin: 2rem 0; 
+        margin: 1rem 0; 
         padding: 1rem;
         text-align: center;
     }
@@ -271,11 +269,11 @@ span {
 
     .parceiros_titulo {
         text-align: center;
-        margin: 3rem 0;
+        margin: 0 0 3rem;
     }
 
     #parceiros {
-        padding: 1rem 0;
+        margin: 3rem 0;
     }
         #parceiros h3 {
             color: var(--branco);
@@ -286,24 +284,24 @@ span {
         border: 1px solid #aaa9a673;
         border-radius: 1rem;
         height: 15rem;
-        margin: 2rem 0;
+        margin: 1rem 0;
+        padding: 1.5rem 0;
     }
 
     .parceiros-icon {
         background-color: #d97902;
-        height: 3.5rem;
-        padding: 0.7rem;
+        height: 3rem;
+        padding: 0.5rem;
         border-radius: 1rem;
         width: 3.5rem;
         color: var(--branco);
         font-size: 2rem;
         text-align: center;
-        margin: 1rem 0;
+        margin: 1.5rem;
     }
 
     .parceiros_texto {
-        margin: 1.5rem;
-        gap: 1rem;
+        margin: 2rem 1.5rem;
     }
 
 
@@ -314,18 +312,20 @@ span {
     
     .passos_titulo {
         text-align: center;
+        margin: 0 0 3rem;
     }
 
     .passos {
         background-color: #aaa9a621;
         border: 1px solid #aaa9a673;
         border-radius: 1rem;
-        height: 13rem;
-        margin: 2rem 0;
+        height: 17rem;
+        margin: 1rem 0;
+        padding: 2rem;
     }
 
-    .passos_texto {
-        margin: 1.5rem;
+    .passos-texto {
+        margin: 1.5rem 0;
     }
 
     .passos_numero {
@@ -334,23 +334,32 @@ span {
     }
 
     .passos-icon {
-        background-color: var(--laranja);
-        border-radius: 2rem;
+        background-color: #d97902;
+        padding: 1rem;
+        border-radius: 1rem;
+        color: var(--preto);
         font-size: 2rem;
-        color: var(--branco);
+        text-align: center;
+        margin: 1.5rem 0;
     }
 
     .passos_rodape {
         background-color: #e2a70448;
         border: 1px solid var(--laranja);
-        border-radius: 2rem;
+        border-radius: 23em;
+        padding: 2rem;
+        color: var(--branco);
         text-align: center;
-        margin: 2rem;
+        margin: 2rem 0;
+    }
+
+    #recompensas {
+        margin: 3rem 0;
     }
 
     .recompensas_titulo {
         text-align: center;
-        margin: 3rem 0;
+        margin: 0 0 3rem;
 
     }
 
@@ -358,8 +367,44 @@ span {
         background-color: #aaa9a621;
         border: 1px solid #aaa9a673;
         border-radius: 1rem;
-        height: 13rem;
+        height: 40rem;
         margin: 2rem 0;
+    }
+
+        .recompensas h3 {
+            color: var(--branco);
+            font-size: 1.875rem;
+            font-weight: 700;
+        }
+
+        .recompensas a {
+            color: var(--laranja);
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+
+        .recompensas span {
+            color: var(--cinza);
+            font-size: 1.125rem;
+            line-height: 1.625rem;
+        }
+
+        .recompensas i {
+            color: var(--laranja);
+            font-weight: 600;
+        }
+
+    .recompensas-imagem {
+        background-image: url(lamborghini.png);
+        height: 20rem;
+        border: 1px solid #aaa9a621;
+        border-radius: 1rem 1rem 0 0;
+        align-items: center;
+    }
+
+    .recompensas-texto {
+        margin: 1.5rem;
+        
     }
 
     #recompensas {
@@ -369,6 +414,13 @@ span {
     .recompensas_texto {
         margin: 1.5rem;
     }
+
+    .indicar {
+        background-color: #e2a70448;
+        border: 1px solid var(--laranja);
+        border-radius: 1rem;
+    }
+
     
 @media (max-width: 768px) {
     .none-mobile {
