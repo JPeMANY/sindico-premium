@@ -132,7 +132,19 @@ section {
     padding: 0.5rem 1.5rem;
     margin-bottom: 2rem;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
+
+    .etiqueta i {
+        font-size: 1rem;
+    }
+
+    .etiqueta span {
+        font-weight: 500;
+    }
 
 .botao {
     background-color: var(--laranja);
@@ -456,9 +468,27 @@ ul {
         margin: 0;
     }
 
-  .container {
-    padding: 0 16px;
-  }
+    .container {
+        padding: 0 16px;
+    }
+
+    /* Main */
+    #vantagens .conteudo {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    #passos .caixas-passos {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    
+    #recompensas .recompensas-geral {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
 }
 
 @media (min-width: 414px) {
