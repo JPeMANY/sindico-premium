@@ -4,6 +4,7 @@
     --branco: #fff;
     --preto: #000000;
     --cinza: #b3b9bb;
+    --rosa: #be1b67;
     --fonte-corpo: 'Inter', Arial, sans-serif;
 }
 
@@ -234,6 +235,9 @@ ul {
         text-align: center;
         margin: 2rem 1.5rem;
     }
+        .banner_titulo span {
+            color: var(--laranja);
+        }
 
     .banner_paragrafo {
         margin: 1.5rem 0;
@@ -260,14 +264,27 @@ ul {
         border: 1px solid var(--laranja);
         color: var(--laranja);
         border-radius: 1rem;
-        height: 13rem;
+        height: 10rem;
+        width: 24rem;
         margin: 1rem 0; 
-        padding: 1rem;
+        padding: 1.5rem 0;
         text-align: center;
     }
+        .vantegens h3 {
+            color: var(--branco);
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 4rem;
+        }
+
+        .vantagens span {
+            color: var(--cinza);
+            font-size: 1.125rem;
+            line-height: 1.625rem;
+        }
 
     .vantagens_icon {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .vantagens_texto {
@@ -283,6 +300,9 @@ ul {
         text-align: center;
         margin: 0 0 3rem;
     }
+        .parceiros_titulo span {
+            color: var(--laranja);
+        }
 
     #parceiros {
         margin: 3rem 0;
@@ -312,6 +332,19 @@ ul {
         margin: 1.5rem;
     }
 
+        .parceiros h3 {
+            color: var(--branco);
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 4rem;
+        }
+
+        .parceiros span {
+            color: var(--cinza);
+            font-size: 1.125rem;
+            line-height: 1.625rem;
+        }
+
     .parceiros_texto {
         margin: 2rem 1.5rem;
     }
@@ -326,6 +359,9 @@ ul {
         text-align: center;
         margin: 0 0 3rem;
     }
+        .passos_titulo span {
+            color: var(--laranja);
+        }
 
     .passos {
         background-color: #aaa9a621;
@@ -340,10 +376,23 @@ ul {
         margin: 1.5rem 0;
     }
 
-    .passos_numero {
-        color: var(--laranja);
-        flex-direction: left;
-    }
+        .passos-texto span {
+            font-size: 1.25rem;
+        }
+
+        .passos h3 {
+            color: var(--branco);
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 4rem;
+        }
+
+        .passos span {
+            color: var(--cinza);
+            font-size: 1.125rem;
+            line-height: 1.625rem;
+        }
+
 
     .passos-icon {
         background-color: #d97902;
@@ -364,6 +413,9 @@ ul {
         text-align: center;
         margin: 2rem 0;
     }
+
+
+/* recompensas */
 
     #recompensas {
         margin: 3rem 0;
@@ -389,7 +441,7 @@ ul {
             font-weight: 700;
         }
 
-        .recompensas a {
+        .recompensas a, i {
             color: var(--laranja);
             font-size: 1.125rem;
             font-weight: 600;
@@ -399,11 +451,6 @@ ul {
             color: var(--cinza);
             font-size: 1.125rem;
             line-height: 1.625rem;
-        }
-
-        .recompensas i {
-            color: var(--laranja);
-            font-weight: 600;
         }
 
     .recompensas-imagem {
@@ -431,8 +478,98 @@ ul {
         background-color: #e2a70448;
         border: 1px solid var(--laranja);
         border-radius: 1rem;
+        text-align: center;
     }
+        .indicar h3 {
+            color: var(--branco);
+            font-size: 1.875rem;
+            font-weight: 700;
+        }
 
+        .indicar a {
+            background-color: var(--laranja);
+            color: #000;
+            border-radius: 15px;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 1rem 1.5rem;
+            text-align: center;
+        }
+
+        .indicar span {
+            color: var(--cinza);
+            font-size: 1.125rem;
+            line-height: 1.625rem;
+        }
+
+        .formulario-titulo {
+            text-align: center;
+        }
+            .formulario-titulo span {
+                color: var(--laranja);
+            }
+        
+        .formulario {
+            background-color: #aaa9a621;
+            border: 1px solid var(--laranja);
+            border-radius: 1rem;
+            height: 50rem;
+            padding: 1.5rem;
+            display: table-column-group;
+        }
+            .formulario input {
+                background-color: #aaa9a621;
+                border: 1px solid var(--cinza);
+                border-radius: 0.5rem;
+                height: 3rem;
+                width: 20rem;
+                margin: 0.5rem;
+                color: var(--cinza);
+            }
+
+            .formulario label {
+                font-size: 0.875rem;
+                color: var(--branco);
+                margin: 1.5rem 0;
+            }
+
+            .formulario button {
+                background-color: var(--laranja);
+                border: none;
+                color: #000;
+                border-radius: 15px;
+                font-size: 1rem;
+                font-weight: 700;
+                padding: 1rem 1.5rem;
+                text-align: center;
+                margin: 2rem;
+            }
+
+            .formulario span {
+                color: var(--cinza);
+                font-size: 1.125rem;
+                line-height: 1.625rem;
+                text-align: center;
+            }
+            
+            .rodape-titulo {
+                margin: 0 0 3rem;
+            }
+
+            .rodape {
+                padding: 1rem;
+            }
+
+            .rodape h3 {
+                color: var(--laranja);
+                font-size:1.5rem;
+            }
+
+            .rodape span {
+                color: var(--branco);
+                font-size: 1rem;
+                font-weight: 600;
+            }
     
 @media (max-width: 768px) {
     .none-mobile {
