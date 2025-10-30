@@ -1,10 +1,15 @@
 :root {
-    --laranja: #d97902;
-    --cor-principal-rgb: 245 158 11;
+    --laranja: #f5bb23ff;
+    --opacidade: rgba(245, 186, 35, 0.205);
+    /* --laranja: #d37f01; */
+    --amarelo: rgb(204, 117, 3);
     --branco: #fff;
-    --preto: #000000;
-    --cinza: #b3b9bb;
+    --preto: #000000ff;
+    --cinza-escuro: #0a0a0aff;
+    --cinza-claro: #131312;
+    --prata: #b3b9bb;
     --rosa: #be1b67;
+    --cor-principal-rgb: 245 158 11;
     --fonte-corpo: 'Inter', Arial, sans-serif;
 }
 
@@ -148,7 +153,7 @@ section {
     }
 
 .botao {
-    background-color: var(--laranja);
+    background: linear-gradient(135deg, var(--laranja), var(--amarelo));
     color: #000;
     border-radius: 15px;
     font-size: 1rem;
@@ -176,21 +181,16 @@ footer {
 
 /* Estilos de tags */
 h1 {
-    font-size: 3rem;
     color: #fff;
     line-height: 1.25em;
-    font-weight: 700;
+    font-weight: 1000;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.25rem;
     color: #fff;
     line-height: 1.25em;
     text-wrap: balance;
-}
-
-h3 {
-    font-size: 1.3rem;
 }
 
 a {
@@ -200,7 +200,7 @@ a {
 p {
     font-size: 1.25rem;
     line-height: 1.625;
-    color: #b3b9bb;
+    color: var(--prata);
 }
 
 ul {
@@ -232,9 +232,17 @@ ul {
 
 
     .banner_titulo {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
         text-align: center;
         margin: 2rem 1.5rem;
+
     }
+        .banner_titulo h1 {
+            font-size: 3rem;
+        }
+
         .banner_titulo span {
             color: var(--laranja);
         }
@@ -260,26 +268,25 @@ ul {
     }
 
     .vantagens {
-        background-color: #e2a70448;
-        border: 1px solid var(--laranja);
+        background-color: #170f02ff;
+        border: 1px solid var(--opacidade);
         color: var(--laranja);
         border-radius: 1rem;
         height: 10rem;
         width: 24rem;
-        margin: 1rem 0; 
+        margin: 0.7rem 0; 
         padding: 1.5rem 0;
         text-align: center;
     }
-        .vantegens h3 {
-            color: var(--branco);
-            font-size: 1.5rem;
+        .vantagens h3 {
+            color: var(--laranja);
+            font-size: 1.125rem;
             font-weight: 700;
-            line-height: 4rem;
         }
 
         .vantagens span {
-            color: var(--cinza);
-            font-size: 1.125rem;
+            color: var(--prata);
+            font-size: 0.875rem;
             line-height: 1.625rem;
         }
 
@@ -293,10 +300,14 @@ ul {
     }
 
     #parceiros {
+        background-color: var(--cinza-escuro);
         margin: 5rem 0;
     }
 
     .parceiros_titulo {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
         text-align: center;
         margin: 0 0 3rem;
     }
@@ -304,24 +315,26 @@ ul {
             color: var(--laranja);
         }
 
-    #parceiros {
-        margin: 3rem 0;
-    }
         #parceiros h3 {
             color: var(--branco);
         }
 
+    .parceiros-caixas {
+        display: block;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
     .parceiros {
-        background-color: #aaa9a621;
+        background: var(--cinza-claro);
         border: 1px solid #aaa9a673;
         border-radius: 1rem;
-        height: 15rem;
-        margin: 1rem 0;
-        padding: 1.5rem 0;
+        padding: 2rem;
+        flex: 1;
     }
 
     .parceiros-icon {
-        background-color: #d97902;
+        background-color: var(--laranja);
         height: 3rem;
         padding: 0.5rem;
         border-radius: 1rem;
@@ -336,14 +349,26 @@ ul {
             color: var(--branco);
             font-size: 1.5rem;
             font-weight: 700;
-            line-height: 4rem;
         }
 
-        .parceiros span {
-            color: var(--cinza);
+        .explicacao {
+            color: var(--prata);
             font-size: 1.125rem;
             line-height: 1.625rem;
         }
+
+        .parceiro {
+            color: var(--laranja);
+            font-size: 1.125rem;
+            line-height: 1.625rem;
+            font-weight: 600;
+        }
+
+    .parceiros-bv, .parceiros-limpeza, .parceiros-seguranca, .parceiros-piscina {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 
     .parceiros_texto {
         margin: 2rem 1.5rem;
@@ -355,7 +380,14 @@ ul {
         text-align: center;
     }
     
+    #passos {
+        background-color: var(--preto);
+    }
+
     .passos_titulo {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
         text-align: center;
         margin: 0 0 3rem;
     }
@@ -363,72 +395,106 @@ ul {
             color: var(--laranja);
         }
 
+    .caixas-passos {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
     .passos {
-        background-color: #aaa9a621;
+        background: linear-gradient(135deg, var(--cinza-claro), var(--cinza-escuro));
         border: 1px solid #aaa9a673;
         border-radius: 1rem;
-        height: 17rem;
-        margin: 1rem 0;
         padding: 2rem;
+        flex: 1;
     }
+
+     .passos-cadastro, .passos-indique, .passos-pontos, .passos-resgate {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem; 
+        margin-top: 3rem;
+     }
 
     .passos-texto {
         margin: 1.5rem 0;
     }
 
         .passos-texto span {
-            font-size: 1.25rem;
+            font-size: 0.875rem;
         }
 
         .passos h3 {
             color: var(--branco);
             font-size: 1.5rem;
             font-weight: 700;
-            line-height: 4rem;
         }
 
         .passos span {
-            color: var(--cinza);
+            color: var(--prata);
             font-size: 1.125rem;
             line-height: 1.625rem;
         }
 
 
     .passos-icon {
-        background-color: #d97902;
+        background: linear-gradient(135deg, var(--laranja), var(--amarelo));
         padding: 1rem;
         border-radius: 1rem;
         color: var(--preto);
         font-size: 2rem;
-        text-align: center;
-        margin: 1.5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 4rem;
+        width: 4rem;
     }
 
+    /* .passos-numeros {
+        color: var(--laranja);
+        margin: 0 1.5rem 0 9.5rem;
+        display: inline-flex;
+        font-size: 5rem;
+    } */
+
     .passos_rodape {
-        background-color: #e2a70448;
+        background-color: #170f02ff;
         border: 1px solid var(--laranja);
         border-radius: 23em;
         padding: 2rem;
         color: var(--branco);
         text-align: center;
         margin: 2rem 0;
+        font-weight: 700;
     }
 
 
 /* recompensas */
 
     #recompensas {
+        background-color: var(--cinza-escuro);
         margin: 3rem 0;
     }
 
     .recompensas_titulo {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
         text-align: center;
         margin: 0 0 3rem;
 
     }
+        .recompensas_titulo span {
+            color: var(--laranja);
+        }
+
+    .recompensas-geral {
+        display: flex;
+        flex-direction: column;
+    }
 
     .recompensas {
-        background-color: #aaa9a621;
+        background-image: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
         border: 1px solid #aaa9a673;
         border-radius: 1rem;
         height: 40rem;
@@ -448,13 +514,13 @@ ul {
         }
 
         .recompensas span {
-            color: var(--cinza);
+            color: var(--prata);
             font-size: 1.125rem;
             line-height: 1.625rem;
         }
 
     .recompensas-imagem {
-        background-image: url(lamborghini.png);
+        background-image: url(lamborghini22.png);
         height: 20rem;
         border: 1px solid #aaa9a621;
         border-radius: 1rem 1rem 0 0;
@@ -462,23 +528,20 @@ ul {
     }
 
     .recompensas-texto {
-        margin: 1.5rem;
-        
-    }
-
-    #recompensas {
-        background-color: #aaa9a621;
-    }
-
-    .recompensas_texto {
-        margin: 1.5rem;
+        margin: 1.5rem;   
     }
 
     .indicar {
         background-color: #e2a70448;
         border: 1px solid var(--laranja);
         border-radius: 1rem;
-        text-align: center;
+        text-align: center; 
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem;
+        flex: 1;
+
     }
         .indicar h3 {
             color: var(--branco);
@@ -487,7 +550,7 @@ ul {
         }
 
         .indicar a {
-            background-color: var(--laranja);
+            background: linear-gradient(135deg, var(--laranja), var(--amarelo));
             color: #000;
             border-radius: 15px;
             font-size: 1rem;
@@ -497,13 +560,17 @@ ul {
         }
 
         .indicar span {
-            color: var(--cinza);
+            color: var(--prata);
             font-size: 1.125rem;
             line-height: 1.625rem;
         }
 
         .formulario-titulo {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
             text-align: center;
+            margin: 0 0 3rem;
         }
             .formulario-titulo span {
                 color: var(--laranja);
@@ -515,16 +582,18 @@ ul {
             border-radius: 1rem;
             height: 50rem;
             padding: 1.5rem;
-            display: table-column-group;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
         }
             .formulario input {
                 background-color: #aaa9a621;
-                border: 1px solid var(--cinza);
+                border: 1px solid var(--prata);
                 border-radius: 0.5rem;
                 height: 3rem;
                 width: 20rem;
                 margin: 0.5rem;
-                color: var(--cinza);
+                color: var(--prata);
             }
 
             .formulario label {
@@ -546,7 +615,7 @@ ul {
             }
 
             .formulario span {
-                color: var(--cinza);
+                color: var(--prata);
                 font-size: 1.125rem;
                 line-height: 1.625rem;
                 text-align: center;
@@ -554,6 +623,12 @@ ul {
             
             .rodape-titulo {
                 margin: 0 0 3rem;
+            }
+
+            .rodape-lista {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
             }
 
             .rodape {
@@ -585,7 +660,7 @@ ul {
 
 @media (min-width: 768px) {
 
-    header {
+    header {     
         flex-direction: row;
     }
 
@@ -626,13 +701,10 @@ ul {
         flex-direction: row;
         gap: 2rem;
     }
+    
 }
 
 @media (min-width: 414px) {
-  .vantagens_geral {
-    display: flex;
-    margin: 0 10rem;
-  }
 
   .parceiros_geral {
     display: flex;
@@ -646,16 +718,30 @@ ul {
   }
 
   .parceiros {
+    display: block;
     margin: 1rem;
-    width: 30rem;
-    height: 10rem;
+    width: 100rem;
+    height: 20rem;
   }
 
   .banner_titulo {
     height: 20rem;
   }
 
-  h1 {
-    font-size: 3rem;
+  .recompensas-geral {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
   }
+
+  .recompensas {
+    width: 80%rem;
+    height: 40rem;
+  }
+
+  .formulario {
+    display: block;
+    
+  }
+
 }
