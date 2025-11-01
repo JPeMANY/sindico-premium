@@ -201,7 +201,7 @@
 
                 <div class="recompensas-geral">
                     <div class="recompensas recompensas-layout-1">
-                        <div class="recompensas-imagem recompensas-imagem-lamborghini"> <img src="lamborghini22.png"></div>
+                        <div class="recompensas-imagem"> <img src="lamborghini22.png" alt="Lamborghini"></div>
                         <div class="recompensas-texto">
                             <div class="etiqueta">O Símbolo de Poder e Velocidade</div>
                             <h3>Drive Experience em Super Máquina</h3>
@@ -210,7 +210,7 @@
                         </div>
                     </div>
                     <div class="recompensas recompensas-layout-2">
-                    <div class="recompensas-imagem recompensas-imagem-resort"><img src="resort.png"></div>
+                    <div class="recompensas-imagem"><img src="resort.png" alt="Resort"></div>
                         <div class="recompensas-texto">
                             <div class="etiqueta">Prêmios Exclusivos</div>
                             <h3>Viagens Exclusivas</h3>
@@ -219,7 +219,7 @@
                         </div>
                     </div>       
                     <div class="recompensas recompensas-layout-1">
-                    <div class="recompensas-imagem recompensas-imagem-chimarrao"><img src="stanley-chimarrao.png"></div>
+                    <div class="recompensas-imagem"><img src="stanley-chimarrao.png" alt="Kit Stanley"></div>
                         <div class="recompensas-texto">
                             <div class="etiqueta">Prêmios Exclusivos</div>
                             <h3>Kit Stanley Chimarrão</h3>
@@ -231,36 +231,37 @@
             </div>
         </section>
 
-        <div class="indicar">
+        <section class="indicar">
             <div class="conteudo">
                 <h3>E muito mais prêmios exclusivos esperando por você</h3>
                 <span>Cada indicação te aproxima de experiências únicas e prêmios de alto padrão</span>
                 <a href="#secao-formulario">Começar a acumular pontos agora</a>
             </div>
-        </div>
+        </section>
 
         <section id="secao-formulario">
             <div class="conteudo">
-                <div class="etiqueta">
-                    <img src="" alt="">
-                    <span>Cadastro Exclusivo</span>
-                </div>
                 <div class="formulario-titulo">
+                    <div class="etiqueta">
+                        <img src="" alt="">
+                        <span>Cadastro Exclusivo</span>
+                    </div>
                     <h2>Chegou a Hora de <span> sua Excelência</span></h2>
-                   <p>O Síndico Premium aguarda você. Preencha o formulário e receba sua credencial de acesso exclusiva.</p>
+                    <p>O Síndico Premium aguarda você. Preencha o formulário e receba sua credencial de acesso exclusiva.</p>
                 </div>
+
                 <div class="formulario">
                 <form action="">
-                    <label for="nome">Nome Completo *</label>
+                    <label class="obrigatorio" for="nome">Nome Completo</label>
                     <input name="nome" type="text" placeholder="Seu nome completo">
 
-                    <label for="email">E-mail *</label>
+                    <label class="obrigatorio" for="email">E-mail</label>
                     <input name="email" type="email" placeholder="seu@email.com">
 
-                    <label for="celular">Telefone *</label>
+                    <label class="obrigatorio" for="celular">Telefone</label>
                     <input name="celular" type="number" placeholder="(00) 00000-0000">
 
-                    <label for="cidade">Cidade *</label>
+                    <label class="obrigatorio" for="cidade">Cidade</label>
                     <input name="cidade" type="text" placeholder="Sua cidade">
 
                     <label for="">Administrador</label>
