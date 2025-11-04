@@ -8,7 +8,11 @@
     --cinza-escuro: #0a0a0aff;
     --cinza-claro: #131312;
     --prata: #b3b9bb;
-    --rosa: #be1b67;
+    --rosa: #df2f2fff;
+    --azul-escuro: #2a69ecff;
+    --verde: #1ba84fff;
+    --azul: #0a97b7ff;
+
     --cor-principal-rgb: 245 158 11;
     --fonte-corpo: 'Inter', Arial, sans-serif;
 }
@@ -21,7 +25,6 @@
 }
 
 body {
-    background-color: #000;
     margin: 0;
     font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', sans-serif;
 }
@@ -68,7 +71,7 @@ header {
 /* ------ Conteúdo ------ */
     
 main {
-    background-color: #070707;
+    background-color: var(--preto);
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
@@ -300,6 +303,7 @@ ul {
 
     #parceiros {
         background: linear-gradient( var(--preto), var(--cinza-escuro));
+        padding-top: 10rem;
     }
 
     .parceiros_titulo {
@@ -327,7 +331,7 @@ ul {
         background: var(--cinza-claro);
         border: 1px solid #aaa9a673;
         border-radius: 1rem;
-        padding: 2rem;
+        padding: 3rem;
         flex: 1;
     }
         .parceiros h3 {
@@ -336,23 +340,38 @@ ul {
             font-weight: 700;
         }
 
-    .parceiros-bv, .parceiros-limpeza, .parceiros-seguranca, .parceiros-piscina {
+    .parceiros-bv, .parceiros-limpeza, .parceiros-seguranca, .parceiros-manutencao, .parceiros-piscina {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
     }
 
     .parceiros-icon {
-        background-color: var(--amarelo);
-        height: 3rem;
-        padding: 0.5rem;
+        padding: 1rem;
         border-radius: 1rem;
-        width: 3.5rem;
         color: var(--branco);
         font-size: 2rem;
-        text-align: center;
-        margin: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3.5rem;
+        width: 3.5rem;
     }
+        .icon-laranja {
+            background: linear-gradient(135deg, #f7b620ff, var(--laranja));
+        }
+        .icon-azul-escuro {
+            background: linear-gradient(135deg, #599df8ff, var(--azul-escuro));
+        }
+        .icon-rosa {
+            background: linear-gradient(135deg, #f46767ff, var(--rosa));
+        }
+        .icon-verde {
+            background: linear-gradient(135deg, #43d679ff, var(--verde));
+        }
+        .icon-azul {
+            background: linear-gradient(135deg, #1fcbe7ff, var(--azul));
+        }
 
         .explicacao {
             color: var(--prata);
@@ -360,15 +379,16 @@ ul {
             line-height: 1.625rem;
         }
 
-        .parceiro {
+        .parceiros a {
             color: var(--amarelo);
             font-size: 1.125rem;
             line-height: 1.625rem;
             font-weight: 600;
+            text-decoration: underline;
         }
 
     .parceiros_texto {
-        margin: 2rem 1.5rem;
+        margin: 1.5rem 0;
     }
 
     .parceiros_rodape {
@@ -380,6 +400,7 @@ ul {
 
     #passos {
         background-color: var(--preto);
+        padding: 5rem 1rem;
     }
 
     .passos_titulo {
@@ -415,7 +436,7 @@ ul {
      }
 
     .passos-texto {
-        margin: 1.5rem 0;
+        
     }
         .passos-texto span {
             font-size: 0.875rem;
@@ -481,13 +502,14 @@ ul {
     }
 
     .recompensas {
-        background-image: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
+        
+        border-radius: 1rem;
         display: flex;
         flex-direction: column;
         gap: 1rem;
         border: 1px solid #aaa9a673;
         height: 40rem;
-        margin: 2rem 0;
+        margin: 1rem 0;
     }
         .recompensas h3 {
             color: var(--branco);
@@ -510,6 +532,7 @@ ul {
     .recompensas-imagem {
         height: 20rem;
         border: 1px solid #aaa9a621;
+        border-radius: 1rem 1rem 0 0;
         align-items: center;
         overflow: hidden;
         position: relative;
@@ -522,16 +545,20 @@ ul {
             height: 100%;
         }
 
+  
+
     .recompensas-texto {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 2rem;
         margin: 1.5rem;   
     }
 
+    
 /* Indicar */
+
     .indicar .conteudo {
-        background-color: #e2a70448;
+        background-color: rgba(250, 181, 5, 0.068);
         border: 1px solid var(--amarelo);
         border-radius: 1rem;
         text-align: center; 
@@ -541,6 +568,11 @@ ul {
         padding: 2rem;
         width: 100%;
     }
+
+        .indicar i {
+            color: var(--amarelo);
+            font-size: 3rem;
+        }
 
         .indicar h3 {
             color: var(--branco);
@@ -566,12 +598,16 @@ ul {
 
 /* Formulario */
 
+        #secao-formulario {
+            background-image: radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
+        }
+
         .formulario-titulo {
             display: flex;
             flex-direction: column;
             gap: 1rem;
             text-align: center;
-            margin: 0 0 3rem;
+            margin-top: 3rem;
             align-items: center;
         }
             .formulario-titulo span {
@@ -632,18 +668,17 @@ ul {
             
 /* Footer */
 
-        .rodape-titulo {
-            margin: 0 0 3rem;
+        .rodape {
+            border-top: 1px solid var(--prata);
+            padding: 1rem;
         }
+
+
 
         .rodape-lista {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
-        }
-
-        .rodape {
-            padding: 1rem;
         }
             .rodape h3 {
                 color: var(--amarelo);
@@ -808,6 +843,7 @@ h2 {
   .recompensas-layout-2 {
     display: flex;
     flex-direction: row-reverse;
+    border-radius: 1rem 0 0 1rem;
   }
 
   .recompensas-imagem {
