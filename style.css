@@ -8,10 +8,6 @@
     --cinza-escuro: #0a0a0aff;
     --cinza-claro: #131312;
     --prata: #b3b9bb;
-    --rosa: #df2f2fff;
-    --azul-escuro: #2a69ecff;
-    --verde: #1ba84fff;
-    --azul: #0a97b7ff;
 
     --cor-principal-rgb: 245 158 11;
     --fonte-corpo: 'Inter', Arial, sans-serif;
@@ -25,6 +21,7 @@
 }
 
 body {
+    background-color: var(--preto);
     margin: 0;
     font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', sans-serif;
 }
@@ -231,6 +228,10 @@ ul {
     background-image: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
 }
 
+    #capa {
+        margin-top: 2.5rem
+    }
+
     .banner_titulo {
         display: flex;
         flex-direction: column;
@@ -364,33 +365,6 @@ ul {
         padding: 0 3rem 3rem 3rem;
     }
 
-    .parceiros-icon {
-        padding: 1rem;
-        border-radius: 1rem;
-        color: var(--branco);
-        font-size: 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 3.5rem;
-        width: 3.5rem;
-    }
-        .icon-laranja {
-            background: linear-gradient(135deg, #f7b620ff, var(--laranja));
-        }
-        .icon-azul-escuro {
-            background: linear-gradient(135deg, #599df8ff, var(--azul-escuro));
-        }
-        .icon-rosa {
-            background: linear-gradient(135deg, #f46767ff, var(--rosa));
-        }
-        .icon-verde {
-            background: linear-gradient(135deg, #43d679ff, var(--verde));
-        }
-        .icon-azul {
-            background: linear-gradient(135deg, #1fcbe7ff, var(--azul));
-        }
-
         .explicacao {
             color: var(--prata);
             font-size: 1.125rem;
@@ -415,7 +389,6 @@ ul {
 
     #passos {
         background-color: var(--preto);
-        padding: 5rem 1rem;
     }
 
     .passos_titulo {
@@ -432,6 +405,7 @@ ul {
     .caixas-passos {
         display: flex;
         flex-direction: column;
+        gap: 1rem;
     }
 
     .passos {
@@ -442,21 +416,16 @@ ul {
         flex: 1;
     }
 
-    .passos-flechas {
-        display: none;
-    }
-
     .passos-vetor {
         display: flex;
         align-items: center;
-        gap: 4rem;
+        gap: 9rem;
     }
         .passos-vetor h2 {
             font-size: 5rem;
             font-weight: 900;
             color: rgba(204, 117, 3, 0.164);
         }
-
 
      .passos-texto {
         display: flex;
@@ -501,7 +470,7 @@ ul {
         padding: 2rem;
         color: var(--branco);
         text-align: center;
-        margin: 2rem 0;
+        margin: 3rem 0;
         font-weight: 700;
     }
 
@@ -526,6 +495,7 @@ ul {
     .recompensas-geral {
         display: flex;
         flex-direction: column;
+        gap: 2rem;
     }
 
     .recompensas {
@@ -533,10 +503,9 @@ ul {
         border-radius: 1rem;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
         border: 1px solid #aaa9a673;
         height: 40rem;
-        margin: 1rem 0;
+
     }
         .recompensas h3 {
             color: var(--branco);
@@ -571,7 +540,6 @@ ul {
             border-radius: 1rem 1rem 0 0;
         }
 
-  
 
     .recompensas-texto {
         display: flex;
@@ -596,10 +564,6 @@ ul {
         .iniciativa-titulo span {
             color: var(--amarelo);
         }
-
-    .iniciativa-caixas {
-
-    }
 
     .iniciativa {
         background-color: var(--cinza-escuro);
@@ -630,7 +594,7 @@ ul {
             color: var(--prata);
             font-size: 1.125rem;
             line-height: 1.625rem;
-            margin-top: 1rem;
+            margin-bottom: 1rem;
         }
 
     .iniciativa-icon {
@@ -656,6 +620,7 @@ ul {
         gap: 1rem;
         padding: 2rem;
         width: 100%;
+        margin-bottom: 3rem;
     }
 
         .indicar i {
@@ -829,6 +794,7 @@ ul {
     }
 }
 
+
 /* Classes gerais */
 .none {
     display: none !important;
@@ -957,10 +923,15 @@ h2 {
     height: 20rem;
   }
 
-    .passos-flechas {
-        font-size: 2rem;
-        color: var(--amarelo);
-      }
+  .passos-vetor {
+    gap: 3rem;
+  }
+
+  .passos-flechas {
+    color: var(--amarelo);
+    font-size: 2rem;
+    margin: 10rem 0;
+  }
 
     .iniciativa {
         margin: 0 2rem 2rem 0;
@@ -981,8 +952,7 @@ h2 {
 
   .recompensas-geral {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    flex-direction: column; 
   }
 
   .recompensas {
