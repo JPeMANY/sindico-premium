@@ -134,56 +134,77 @@ section {
 
 /* Classes gerais */
 
-.patrocinio-logo {
-    opacity: 50%;
-    background-color: rgb(252, 245, 227);
-    border-radius: 0 1rem 1rem 0;
+.patrocinio-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
-    bottom: 0;
+    bottom: 1rem;
     left: 0;
-    width: 4.3rem;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    z-index: 20;
-}
-
-.patrocinio-texto {
-    background-color: rgb(245, 212, 130);
-    border-radius: 0 1rem 1rem 0;
-    position: fixed;
-    bottom: 0;
-    padding: 0.5rem;
-    padding-left: 5.3rem;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
     z-index: 10;
-    opacity: 0;
-    transform: translateX(-20px);
-    transition: 0.2s ease;
 }
-    .patrocinio-texto span {
-        font-size: 0.1rem;
+
+    .patrocinio-logo, .patrocinio-texto {
+        box-shadow: hsla(0, 0%, 0%, 0.4) 3px 5px 15px;
     }
 
-    .patrocinio-texto a {
-        font-size: 1.300rem;
-        font-weight: 600;
-        color: #083727ff;
+    .patrocinio-logo {
+        background-color: var(--cinza-claro);
+        border-radius: 0 1rem 1rem 0;
+        width: 5.5rem;
+        display: flex;
+        flex-direction: column;
+        z-index: 20;
+        padding: 0.8rem;
+        z-index: 1;
     }
 
-    .patrocinio-texto i {
-        color: #866b45ff;
-        font-size: 1rem;
-        font-weight: 600;
-        justify-content: center;
-    }
+        .patrocinio-logo img {
+            opacity: 0.5;
+        }
 
-.patrocinio-logo:hover, .patrocinio-container:hover .patrocinio-texto {
-    opacity: 1;
-    transform: translateX(0);
-}
+    .patrocinio-texto {
+        background-color: var(--cinza-escuro);
+        border-radius: 0 1rem 1rem 0;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        z-index: 10;
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: 0.2s ease;
+        margin-left: -20px;
+        padding-left: calc(20px + 1rem);
+        z-index: 0;
+        color: white;
+    }
+        .patrocinio-texto a {
+            font-size: 0.1rem;
+            text-decoration: none;
+        }
+
+        .patrocinio-texto span {
+            font-size: 1.300rem;
+            font-weight: 600;
+            color: var(--amarelo);
+        }
+
+        .patrocinio-texto i {
+            color: var(--amarelo);
+            font-size: 1rem;
+            font-weight: 600;
+            justify-content: center;
+            margin-left: 0.3rem;
+        }
+
+    .patrocinio-container:hover img {
+        opacity: 1;
+        
+    }
+    .patrocinio-container:hover .patrocinio-texto {
+        transform: translateX(0);
+        opacity: 1;
+    }
 
 .etiqueta {
     background-color: rgb(var(--cor-principal-rgb) / 0.1);
