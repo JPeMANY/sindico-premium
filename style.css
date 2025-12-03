@@ -37,8 +37,8 @@ header {
     background-color: hsl(0 0 0 / 0.5);
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
-    padding: 1rem;
     width: 100%;
+    padding: 1rem;  
     display: flex;
     flex-direction: column;
     z-index: 10;
@@ -347,6 +347,11 @@ ul {
     transform: scale(1.1);
 }
 
+.saiba-mais-seta:hover {
+    transition: transform 0.5s ease;
+    transform: translateX(7px);
+}
+
     #capa {
         margin-top: 2.5rem
     }
@@ -493,6 +498,8 @@ ul {
     }
 
         .explicacao {
+            vertical-align: -3px;
+            cursor: pointer;
             color: var(--prata);
             font-size: 1.125rem;
             line-height: 1.625rem;
@@ -672,8 +679,28 @@ ul {
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        margin: 1.5rem;   
+        margin: 1.5rem;
     }
+
+    .recompensas-texto i {
+        vertical-align: -3px;
+        cursor: pointer;
+    }
+
+    .etiqueta-recompensas {
+        font-size: 0.875rem;
+        background-color: rgb(var(--cor-principal-rgb) / 0.1);
+        border: 1px solid rgb(var(--cor-principal-rgb) / 0.3);;
+        color: var(--amarelo);
+        border-radius: 2rem;
+        text-align: center;
+        margin-right: 5rem;
+        padding: 0.4rem;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+    } 
+ 
 
 /* Iniciativas */
 
@@ -692,12 +719,15 @@ ul {
             color: var(--amarelo);
         }
 
+    .iniciativa-caixas, .iniciativa-coluna {
+        gap: 2rem;
+    }
+
     .iniciativa {
         background-color: var(--cinza-escuro);
         border: 1px solid #aaa9a673;
         border-radius: 1rem;
         flex: 1;
-        margin: 1rem 0.5rem;
         padding: 3rem;
         position: relative;
         overflow: hidden;
@@ -1024,7 +1054,7 @@ h2 {
 }
 
     header {
-        padding: 0.5rem 5rem;
+        padding: 1rem 2.5rem;  
     }
 
     .etiqueta-banner {
@@ -1082,7 +1112,7 @@ h2 {
   }
 
     .iniciativa {
-        margin: 0 2rem 2rem 0;
+        
     }
     
     .iniciativa-coluna {
@@ -1109,6 +1139,10 @@ h2 {
     gap: 2rem;
     width: 80rem;
     height: 30rem;
+  }
+
+  .etiqueta-recompensas {
+    margin-right: 15rem;
   }
 
   .recompensas-layout-2 {
