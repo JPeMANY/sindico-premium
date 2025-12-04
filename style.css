@@ -190,6 +190,7 @@ section {
         }
 
         .patrocinio-texto i {
+            vertical-align: -1px;
             color: var(--amarelo);
             font-size: 1rem;
             font-weight: 600;
@@ -496,10 +497,12 @@ ul {
     .parceiros_texto {
         padding: 0 3rem 3rem 3rem;
     }
-
-        .explicacao {
+        .parceiros_texto i {
             vertical-align: -3px;
             cursor: pointer;
+    }
+
+        .explicacao {
             color: var(--prata);
             font-size: 1.125rem;
             line-height: 1.625rem;
